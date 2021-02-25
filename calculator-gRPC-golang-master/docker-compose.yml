@@ -1,0 +1,11 @@
+version: "0.1"
+services:
+    calc_server:
+        build: .
+        container_name: calculator-grpc-golang
+        ports:
+            - 4001:4001
+        volumes:
+            - ./server/:/go/src/github.com/dimash200101/calculator-gRPC-golang/server/
+            - ./proto/:/go/src/github.com/dimash200101/calculator-gRPC-golang/proto/
+
